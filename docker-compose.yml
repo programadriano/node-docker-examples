@@ -11,7 +11,7 @@ services:
   api: 
     container_name: ts-api2
     restart: always
-    image: tsapi2 
+    image: tsapi3 
     ports:
       - "3050:3050"
     links:
@@ -24,5 +24,4 @@ services:
       - "28017:28017"   
     environment:
       - AUTH=no
-      
     

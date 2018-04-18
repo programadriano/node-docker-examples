@@ -1,0 +1,55 @@
+<app-stream-header></app-stream-header>
+
+<!-- .c-toolbar -->
+<div class="c-toolbar u-marginBottom-m">
+	<h2 class="u-h4">
+		Vídeos
+	</h2>
+
+	<a class="c-button c-button--success u-marginLeft-auto u-hidden-down@mobile" [routerLink]="['/movie', 'new']" role="button"
+	 id="step1">Cadastrar vídeo</a>
+</div>
+<!-- // .c-toolbar -->
+
+<section class="container">
+
+	<!-- .c-breadcrumb -->
+	<ol class="c-breadcrumb u-marginBottom-l">
+		<li class="c-breadcrumb__item">
+			<a [routerLink]="['/']">Home</a>
+		</li>
+		<li class="c-breadcrumb__item is-active">Vídeos</li>
+	</ol>
+	<!-- // .c-breadcrumb -->
+
+
+
+	<caption class="caption__title">
+		Lista de vídeos
+	</caption>
+
+	<p-dataTable [value]="movies" [rows]="10" [paginator]="true" [pageLinks]="5" [rowsPerPageOptions]="[5,10,20,50,100]">
+		<p-column field="_id" header="Id"></p-column>
+		<p-column field="title" header="Título"></p-column>
+		<p-column field="description" header="Descrição"></p-column>
+
+		<!-- <p-column styleClass="col-button">
+			<ng-template let-car="rowData" pTemplate="body">
+				<div class="u-float-right">
+					<button type="button" pButton (click)="edit(car._id)" class="c-button c-button--info">
+						Editar
+					</button>
+					<button type="button" pButton (click)="delete(car._id)" class="c-button c-button--danger">
+						<i class="fa fa-trash" aria-hidden="true"></i>
+					</button>
+				</div>
+			</ng-template>
+		</p-column> -->
+
+	</p-dataTable>
+
+
+
+</section>
+
+<app-stream-footer></app-stream-footer>

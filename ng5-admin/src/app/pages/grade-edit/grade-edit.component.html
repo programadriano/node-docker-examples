@@ -1,0 +1,99 @@
+<app-stream-header></app-stream-header>
+
+<!-- .c-toolbar -->
+<div class="c-toolbar u-marginBottom-m">
+  <h2 class="u-h4">Vídeos</h2>
+</div>
+<!-- // .c-toolbar -->
+
+<section class="container">
+
+  <!-- .c-breadcrumb -->
+  <ol class="c-breadcrumb u-marginBottom-l">
+    <li class="c-breadcrumb__item">
+      <a [routerLink]="['/']">Home</a>
+    </li>
+    <li class="c-breadcrumb__item">
+      <a [routerLink]="['/movie']">Vídeo</a>
+    </li>
+    <li class="c-breadcrumb__item is-active">Editar vídeo</li>
+  </ol>
+  <!-- // .c-breadcrumb -->
+
+  <div class="col-lg-8 col-xl-6 u-margin-auto">
+
+    <h3 class="u-marginBottom-s">Editar vídeo</h3>
+
+    <!-- .c-card -->
+    <div class="c-card u-padding-m">
+      <h5 class="u-h6 u-marginBottom-m">Preencha abaixo todos os dados do programa</h5>
+      <form>
+
+
+
+
+        <div class="c-field u-marginBottom-s">
+          <div class="row">
+            <div class="col-xl-6">
+              <div class="c-field u-marginBottom-s">
+                <label class="c-field__label">Inicia as</label>
+                <input class="c-input c-input--default c-input--l width-100" #hourInit value="{{movie.title}}" type="text" placeholder="StreamName"
+                  name="Channel">
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="c-field u-marginBottom-s">
+                <label class="c-field__label">Termina as</label>
+                <input class="c-input c-input--default c-input--l width-100" #hourEnd value="{{movie.description}}" type="text" placeholder="StreamName"
+                  name="Channel">
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="c-field u-marginBottom-s">
+          <label class="c-field__label">Insira a URL da Página</label>
+          <input class="c-input c-input--default input--l width-100" #link value="{{movie.url}}" type="text" placeholder="http://stream.bandeirantes.com.br"
+            name="Channel">
+        </div>
+{{movie}}sss
+
+        <div class="c-divider u-marginVertical-s"></div>
+
+        <div class="c-field u-marginBottom-s">
+          <div class="c-choice c-choice--checkbox">
+            <input class="c-choice__input" id="checkbox8" name="checkboxes" type="checkbox" #autoTurnOn [checked]="movie.active">
+            <label class="c-choice__label" for="checkbox8">Ligar programa automaticamente no horário citado acima</label>
+          </div>
+        </div>
+
+
+        <div class="c-field u-marginBottom-s">
+          <div class="u-text-center" data-intro="Iniciar uma nova transmissão">
+            <button type="submit" (click)="save(
+            programSelected.value,
+						hourInit.value,
+						hourEnd.value,
+						link.value,
+						monday.checked,
+						tuesday.checked,
+						wednesday.checked,
+						thursday.checked,
+						friday.checked,
+						saturday.checked,
+            sunday.checked,
+            autoTurnOn.checked
+						)" class="c-button c-button-success">Atualizar Programa</button>
+          </div>
+        </div>
+
+      </form>
+
+    </div>
+    <!-- // .c-card -->
+
+  </div>
+</section>
+
+<app-stream-footer></app-stream-footer>

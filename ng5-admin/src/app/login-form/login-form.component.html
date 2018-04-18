@@ -1,0 +1,16 @@
+<form class="c-login__content" (submit)="logar()" #formLogin="ngForm">
+	<div class="c-field u-marginBottom-s">
+		<label class="c-field__label" for="input1">Digite o usuário da sua máquina</label>
+		<input type="text" class="c-input" id="input1" [(ngModel)]="usuario" name="Login" placeholder="Digite o seu usuário" required>
+	</div>
+
+	<div class="c-field u-marginBottom-s">
+		<label class="c-field__label" for="input2">Senha</label>
+		<input type="password" class="c-input" id="input2" [(ngModel)]="senha" name="Password" placeholder="Digite sua senha" required>
+	</div>
+
+	<button type="submit" #btnLogin class="c-button c-button--fullwidth" [disabled]="formLogin.form.invalid">
+		Entrar
+	</button>
+
+</form>

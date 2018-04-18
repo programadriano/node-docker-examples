@@ -1,0 +1,95 @@
+/* You can add global scss to this file, and also import other style files */
+@import 'node_modules/bootstrap/dist/css/bootstrap-grid.min';
+@import 'assets/scss/main';
+
+
+//Table Plugin
+.ui-datatable{
+    border: 1px solid #e6eaee;
+    border-radius: 4px;
+    background-color: #fff;
+    border-collapse: collapse;
+
+    table{
+        display: table;
+        width: 100%;
+        max-width: 100%;
+
+        tr{
+            border-top: 1px solid #e6eaee !important;
+            border-bottom: 1px solid #e6eaee !important;
+        }
+    }
+
+    th.ui-state-default{
+        color: #7f8fa4;
+        font-size: .875rem;
+        font-weight: 500;
+        padding: 10px 0 10px 30px;
+        text-align: left;
+        white-space: nowrap;
+        vertical-align: middle;
+
+        &:last-child {
+          padding-right: 1.875rem;
+        }
+    }
+}
+
+.ui-datatable .ui-datatable-thead>tr>th{
+    padding: 10px 0 10px 30px;
+}
+
+.ui-datatable .ui-datatable-data>tr>td{
+      padding: 20px 20px 20px 30px !important;
+      color: #354052;
+      font-size: .875rem;
+      font-weight: 500;
+      text-align: left;
+      white-space: nowrap;
+      vertical-align: middle;
+}
+
+.ui-datatable-default{
+    position: relative;
+    padding: 25px 30px;
+    border: 1px solid #e6eaee;
+    border-bottom: 0;
+    border-radius: 4px 4px 0 0;
+    background-color: #fff;
+    color: #354052;
+    font-size: 24px;
+    text-align: left;
+}
+
+.caption__title {
+    width: 100%;
+    display: block;
+    position: relative;
+    padding: 25px 30px;
+    border: 1px solid #e6eaee;
+    border-bottom: 0;
+    border-radius: 4px 4px 0 0;
+    background-color: #fff;
+    color: #354052;
+    font-size: 24px;
+    text-align: left;
+
+    small {
+        display: inline-block;
+        margin-left: 10px;
+        color: #7f8fa4;
+        font-size: 14px;
+
+        &::before{
+            display: inline-block;
+            position: relative;
+            bottom: -2px;
+            width: 1px;
+            height: 14px;
+            margin-right: 12px;
+            background-color: #dfe3e9;
+            content: "";
+        }
+    }
+}

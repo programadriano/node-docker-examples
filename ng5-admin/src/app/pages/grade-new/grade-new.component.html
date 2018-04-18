@@ -1,0 +1,73 @@
+<app-stream-header></app-stream-header>
+
+<!-- .c-toolbar -->
+<div class="c-toolbar u-marginBottom-m">
+  <h2 class="u-h4">Vídeo</h2>
+</div>
+<!-- // .c-toolbar -->
+
+<section class="container">
+
+  <!-- .c-breadcrumb -->
+  <ol class="c-breadcrumb u-marginBottom-l">
+    <li class="c-breadcrumb__item">
+      <a [routerLink]="['/']">Home</a>
+    </li>
+    <li class="c-breadcrumb__item">
+      <a [routerLink]="['/movie']">Vídeo</a>
+    </li>
+    <li class="c-breadcrumb__item is-active">Adicionar novo vídeo</li>
+  </ol>
+  <!-- // .c-breadcrumb -->
+
+  <div class="col-lg-8 col-xl-6 u-margin-auto">
+
+    <div class="c-card u-padding-m">
+      <h5 class="u-h6 u-marginBottom-m">Preencha todos os dados abaixo</h5>
+      <form>
+
+
+
+        <div class="c-field u-marginBottom-s">
+          <div class="row">
+            <div class="col-xl-6">
+              <label class="c-field__label">Título</label>
+              <input class="c-input c-input--default c-input--l width-100" #title type="text" name="title">
+            </div>
+            <div class="c-divider u-marginVertical-s"></div>
+            <div class="col-xl-6">
+              <label class="c-field__label">Descrição</label>
+              <input class="c-input c-input--default c-input--l width-100" #description type="text" name="description">
+            </div>
+          </div>
+        </div>
+
+        <div class="c-divider u-marginVertical-s"></div>
+        <div class="c-field u-marginBottom-s">
+          <label class="c-field__label">Insira a URL da Página</label>
+          <input class="c-input c-input--default c-input--l width-100" #url type="url" name="url">
+        </div>
+
+
+        <div class="c-divider u-marginVertical-s"></div>
+        <div class="c-field u-marginBottom-s">
+          <div class="c-choice c-choice--checkbox">
+            <input class="c-choice__input" id="checkbox8" name="active" type="checkbox" #active>
+            <label class="c-choice__label" for="checkbox8">Ativo</label>
+          </div>
+        </div>
+
+        <div class="c-field u-marginBottom-s">
+          <div class="u-text-center">
+            <button type="submit" (click)="save(title.value, description.value, url.value, active.checked)" class="c-button c-button-success">Salvar</button>
+          </div>
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+
+</section>
+
+<app-stream-footer></app-stream-footer>

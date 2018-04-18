@@ -1,0 +1,28 @@
+version: "2"
+services:
+  app: 
+    container_name: app
+    restart: always
+    image: ng_admin 
+    ports:
+      - "4000:80"
+    links:
+      - api
+  api: 
+    container_name: ts-api2
+    restart: always
+    image: tsapi2 
+    ports:
+      - "3050:3050"
+    links:
+      - mongo_fcamara
+  mongo_fcamara:     
+    container_name: mongo_fcamara
+    image: tutum/mongodb 
+    ports:
+      - "27017:27017"
+      - "28017:28017"   
+    environment:
+      - AUTH=no
+      
+    

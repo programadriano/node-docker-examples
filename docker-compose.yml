@@ -9,9 +9,9 @@ services:
     links:
       - api
   api: 
-    container_name: ts-api2
+    container_name: tsapi
     restart: always
-    image: tsapi3 
+    image: ts-api 
     ports:
       - "3050:3050"
     links:
